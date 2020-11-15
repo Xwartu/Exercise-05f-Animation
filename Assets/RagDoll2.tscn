@@ -1,0 +1,163 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Skeleton.gd" type="Script" id=1]
+[ext_resource path="res://Blender/RagDoll.dae" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.0828945
+height = 0.663156
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 0.099956
+height = 0.799648
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.100162
+height = 0.801293
+
+[sub_resource type="CapsuleShape" id=4]
+radius = 0.0745259
+height = 0.596207
+
+[sub_resource type="CapsuleShape" id=5]
+radius = 0.312536
+height = 2.50029
+
+[sub_resource type="CapsuleShape" id=6]
+radius = 0.0544006
+height = 0.435204
+
+[sub_resource type="CapsuleShape" id=7]
+radius = 0.057348
+height = 0.458784
+
+[sub_resource type="Animation" id=8]
+resource_name = "Idle"
+
+[node name="RagDoll" instance=ExtResource( 2 )]
+
+[node name="Skeleton" parent="Armature" index="0"]
+transform = Transform( 0.999999, 0, -0.00115192, 0, 1, 0, 0.00115192, 0, 0.999999, 0, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="RagDoll" parent="Armature/Skeleton" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.122956, 0 )
+
+[node name="Physical Bone Bone" type="PhysicalBone" parent="Armature/Skeleton" index="1"]
+transform = Transform( 1, 6.28643e-09, 0, 0, 0, -1, -6.28643e-09, 1, 0, 0, 0.0406124, 0 )
+joint_type = 3
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.414473 )
+body_offset = Transform( 1, 6.40284e-09, 0, -6.40284e-09, 1, 0, 0, 0, 1, 0, 0, -0.414473 )
+bone_name = "Bone"
+joint_constraints/angular_limit_enabled = false
+joint_constraints/angular_limit_upper = 90.0
+joint_constraints/angular_limit_lower = -90.0
+joint_constraints/angular_limit_bias = 0.3
+joint_constraints/angular_limit_softness = 0.9
+joint_constraints/angular_limit_relaxation = 1.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/Physical Bone Bone" index="0"]
+shape = SubResource( 1 )
+
+[node name="Physical Bone Bone001" type="PhysicalBone" parent="Armature/Skeleton" index="2"]
+transform = Transform( 0.00131315, -0.998987, -0.0449922, -0.999976, -0.00162577, 0.00691255, -0.00697874, 0.0449818, -0.998965, 0.0224862, 0.451631, 0.499263 )
+joint_type = 3
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.34812e-07, -2.61451e-08, 0.49978 )
+body_offset = Transform( 1, 1.01863e-09, 3.25963e-09, -1.10595e-09, 1, -4.47035e-08, -1.86265e-09, 7.45058e-08, 1, -5.36442e-07, 4.8487e-08, -0.499781 )
+bone_name = "Bone.001"
+joint_constraints/angular_limit_enabled = false
+joint_constraints/angular_limit_upper = 90.0
+joint_constraints/angular_limit_lower = -90.0
+joint_constraints/angular_limit_bias = 0.3
+joint_constraints/angular_limit_softness = 0.9
+joint_constraints/angular_limit_relaxation = 1.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/Physical Bone Bone001" index="0"]
+shape = SubResource( 2 )
+
+[node name="Physical Bone Bone002" type="PhysicalBone" parent="Armature/Skeleton" index="3"]
+transform = Transform( 1.10958e-10, -1, -6.0536e-09, 0.999808, -1.9443e-10, -0.019714, 0.019714, 1.851e-08, 0.999808, -5.3551e-09, 0.464958, -0.500711 )
+joint_type = 3
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54608e-07, -8.32848e-09, 0.500807 )
+body_offset = Transform( 1, 1.72804e-10, 1.11759e-08, -1.10958e-10, 1, 5.93718e-09, 1.67638e-08, 1.86265e-08, 1, 1.49012e-07, 5.3551e-09, -0.500809 )
+bone_name = "Bone.002"
+joint_constraints/angular_limit_enabled = false
+joint_constraints/angular_limit_upper = 90.0
+joint_constraints/angular_limit_lower = -90.0
+joint_constraints/angular_limit_bias = 0.3
+joint_constraints/angular_limit_softness = 0.9
+joint_constraints/angular_limit_relaxation = 1.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/Physical Bone Bone002" index="0"]
+shape = SubResource( 3 )
+
+[node name="Physical Bone Bone005" type="PhysicalBone" parent="Armature/Skeleton" index="4"]
+transform = Transform( 1, 6.28643e-09, 0, 0, 0, -1, -6.28643e-09, 1, 0, 0, 0.827714, 0 )
+joint_type = 3
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.372629 )
+body_offset = Transform( 1, 6.40284e-09, 0, -6.40284e-09, 1, 0, 0, 0, 1, 0, 0, -0.372629 )
+bone_name = "Bone.005"
+joint_constraints/angular_limit_enabled = false
+joint_constraints/angular_limit_upper = 90.0
+joint_constraints/angular_limit_lower = -90.0
+joint_constraints/angular_limit_bias = 0.3
+joint_constraints/angular_limit_softness = 0.9
+joint_constraints/angular_limit_relaxation = 1.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/Physical Bone Bone005" index="0"]
+shape = SubResource( 4 )
+
+[node name="Physical Bone Bone007" type="PhysicalBone" parent="Armature/Skeleton" index="5"]
+transform = Transform( -6.28643e-09, -1, 0, 0, 0, 1, -1, 6.28643e-09, 0, 0, -1.1076, 0 )
+joint_type = 3
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.56268 )
+body_offset = Transform( 1, -6.40284e-09, 0, 6.40284e-09, 1, 0, 0, 0, 1, 0, 0, -1.56268 )
+bone_name = "Bone.007"
+joint_constraints/angular_limit_enabled = false
+joint_constraints/angular_limit_upper = 90.0
+joint_constraints/angular_limit_lower = -90.0
+joint_constraints/angular_limit_bias = 0.3
+joint_constraints/angular_limit_softness = 0.9
+joint_constraints/angular_limit_relaxation = 1.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/Physical Bone Bone007" index="0"]
+shape = SubResource( 5 )
+
+[node name="Physical Bone Bone008" type="PhysicalBone" parent="Armature/Skeleton" index="6"]
+transform = Transform( 1, 7.35825e-06, -2.20025e-08, 7.35383e-06, -0.999136, 0.0416247, 2.83821e-07, -0.0416248, -0.999136, -1.74623e-10, -2.6816, 0.271768 )
+joint_type = 3
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.10795e-09, 4.05614e-06, 0.272003 )
+body_offset = Transform( 1, -9.5315e-10, -2.10712e-08, -2.76486e-10, 1, -1.11759e-08, 2.25846e-08, 1.04308e-07, 1, -3.76531e-10, -4.05312e-06, -0.272003 )
+bone_name = "Bone.008"
+joint_constraints/angular_limit_enabled = false
+joint_constraints/angular_limit_upper = 90.0
+joint_constraints/angular_limit_lower = -90.0
+joint_constraints/angular_limit_bias = 0.3
+joint_constraints/angular_limit_softness = 0.9
+joint_constraints/angular_limit_relaxation = 1.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/Physical Bone Bone008" index="0"]
+shape = SubResource( 6 )
+
+[node name="Physical Bone Bone009" type="PhysicalBone" parent="Armature/Skeleton" index="7"]
+transform = Transform( 1, -2.15005e-09, -8.49832e-09, 7.18488e-09, 0.99883, -0.0483676, -1.33063e-07, 0.0483676, 0.99883, 5.15138e-09, -2.65641, -0.286405 )
+joint_type = 4
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.72856e-09, 1.42517e-06, 0.28674 )
+body_offset = Transform( 1, -2.14641e-09, -8.3819e-09, 7.3851e-10, 1, 1.86265e-08, -5.47152e-09, 1.49012e-08, 1, 5.13199e-09, -1.43051e-06, -0.28674 )
+bone_name = "Bone.009"
+joint_constraints/linear_limit_upper = 1.0
+joint_constraints/linear_limit_lower = -1.0
+joint_constraints/linear_limit_softness = 1.0
+joint_constraints/linear_limit_restitution = 0.7
+joint_constraints/linear_limit_damping = 1.0
+joint_constraints/angular_limit_upper = 0.0
+joint_constraints/angular_limit_lower = 0.0
+joint_constraints/angular_limit_softness = 1.0
+joint_constraints/angular_limit_restitution = 0.7
+joint_constraints/angular_limit_damping = 1.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/Physical Bone Bone009" index="0"]
+shape = SubResource( 7 )
+
+[node name="AnimationPlayer" parent="." index="1"]
+anims/Idle = SubResource( 8 )
