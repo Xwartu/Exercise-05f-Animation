@@ -16,7 +16,7 @@ Built using Blender 2.90.1, Godot 3.2.2
 None
 
 ## Extra Credit
-None
+Yes, ended up doing two ragdolls by accident trying to troubleshoot. One is a Collada abd the other is glTF, but both Ragdoll. 
 
 ## Created by 
 Joshua Tonner
